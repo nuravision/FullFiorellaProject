@@ -11,5 +11,7 @@ namespace FullFiorellaProject.ViewModels
         public AboutVideo AboutVideos { get; set; }
         public AboutTitles AboutTitles { get; set; }
         public List<IconTitle> IconTitles { get; set; }
+        public FlowerExperts FlowerExperts { get; set; }
+        public List<Experts> Experts { get; set; }
     }
 }

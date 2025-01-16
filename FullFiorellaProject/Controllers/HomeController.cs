@@ -22,6 +22,8 @@ namespace FullFiorellaProject.Controllers
             AboutVideo aboutVideo=await _context.AboutVideos.FirstOrDefaultAsync();
             AboutTitles aboutTitles=await _context.AboutTitles.FirstOrDefaultAsync();
             List<IconTitle>iconTitles=await _context.IconTitles.ToListAsync();
+            FlowerExperts flowerExperts= await _context.FlowerExperts.FirstOrDefaultAsync();
+            List<Experts> experts=await _context.Experts.ToListAsync();
             HomeVm model = new()
             {
                 Sliders = sliders,
@@ -30,7 +32,9 @@ namespace FullFiorellaProject.Controllers
                 Products = products,
                 AboutVideos=aboutVideo,
                 AboutTitles=aboutTitles,
-                IconTitles=iconTitles
+                IconTitles=iconTitles,
+                FlowerExperts=flowerExperts,
+                Experts=experts
             };
             return View(model);
         }
