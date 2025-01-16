@@ -12,5 +12,7 @@ namespace FullFiorellaProject.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductsImages> ProductsImages { get; set; }
         public DbSet<AboutVideo> AboutVideos { get; set; }
+        public DbSet<AboutTitles> AboutTitles { get; set; }
+        public DbSet<IconTitle> IconTitles { get; set; }
     }
 }

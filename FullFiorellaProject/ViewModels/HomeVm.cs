@@ -9,5 +9,7 @@ namespace FullFiorellaProject.ViewModels
         public List<Category> Categories { get; set; }
         public List<Product> Products { get; set; }
         public AboutVideo AboutVideos { get; set; }
+        public AboutTitles AboutTitles { get; set; }
+        public List<IconTitle> IconTitles { get; set; }
     }
 }

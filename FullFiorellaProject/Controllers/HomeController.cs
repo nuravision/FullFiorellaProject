@@ -20,13 +20,17 @@ namespace FullFiorellaProject.Controllers
             List<Category>categories = await _context.Categories.ToListAsync();
             List<Product>products = await _context.Products.Include(m=>m.ProductImages).ToListAsync();  
             AboutVideo aboutVideo=await _context.AboutVideos.FirstOrDefaultAsync();
+            AboutTitles aboutTitles=await _context.AboutTitles.FirstOrDefaultAsync();
+            List<IconTitle>iconTitles=await _context.IconTitles.ToListAsync();
             HomeVm model = new()
             {
                 Sliders = sliders,
                 SliderInfos=sliderInfos,
                 Categories = categories,
                 Products = products,
-                AboutVideos=aboutVideo
+                AboutVideos=aboutVideo,
+                AboutTitles=aboutTitles,
+                IconTitles=iconTitles
             };
             return View(model);
         }
