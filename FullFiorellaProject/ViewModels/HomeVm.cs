@@ -13,5 +13,6 @@ namespace FullFiorellaProject.ViewModels
         public List<IconTitle> IconTitles { get; set; }
         public FlowerExperts FlowerExperts { get; set; }
         public List<Experts> Experts { get; set; }
+        public List<Blog> Blogs { get; set; }
     }
 }

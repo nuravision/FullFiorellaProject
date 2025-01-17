@@ -24,6 +24,7 @@ namespace FullFiorellaProject.Controllers
             List<IconTitle>iconTitles=await _context.IconTitles.ToListAsync();
             FlowerExperts flowerExperts= await _context.FlowerExperts.FirstOrDefaultAsync();
             List<Experts> experts=await _context.Experts.ToListAsync();
+            List<Blog>blogs= await _context.Blogs.Where(m=>!m.SoftDeleted).ToListAsync();
             HomeVm model = new()
             {
                 Sliders = sliders,
@@ -34,7 +35,8 @@ namespace FullFiorellaProject.Controllers
                 AboutTitles=aboutTitles,
                 IconTitles=iconTitles,
                 FlowerExperts=flowerExperts,
-                Experts=experts
+                Experts=experts,
+                Blogs=blogs,
             };
             return View(model);
         }
